@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BotaoPrincipal" parent="TextAppearance.AppCompat.Button">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:backgroundTint">@color/teal_700</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="BotaoAzul" parent="TextAppearance.AppCompat.Button">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:backgroundTint">@color/blue</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="BotaoAmarelo" parent="TextAppearance.AppCompat.Button">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:backgroundTint">@color/yellow</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="BotaoRoxo" parent="TextAppearance.AppCompat.Button">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:backgroundTint">@color/purple_500</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="BotaoVermelho" parent="TextAppearance.AppCompat.Button">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:backgroundTint">@color/red</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TituloNegrito" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TituloCampo" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>
