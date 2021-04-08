@@ -1,4 +1,4 @@
-package com.example.appdemo;
+package com.example.appdemo.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.appdemo.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -23,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //Cria o objeto sharedPreferences para utilização
         SharedPreferences sharedPreferences =
                 getSharedPreferences(getString(R.string.pref_key), Context.MODE_PRIVATE);
 
@@ -41,13 +44,16 @@ public class LoginActivity extends AppCompatActivity {
                     if(txtUsuario.getText().toString().equals("jonas") &&
                             txtSenha.getText().toString().equals("abc123")){
 
-                                    /*Se acertar os dados de acesso, salva eles no SharedPreferences para não
-                                    pedir login novamente */
+                        /*Se acertar os dados de acesso, salva eles no SharedPreferences para não
+                        pedir login novamente */
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putString("usuario", txtUsuario.getText().toString());
+                        editor.putBoolean("logado", true);
+                        editor.putString("chavePix", "01245669800");
                         if(editor.commit()){
                             Intent tela = new Intent(context, MenuActivity.class);
                             startActivity(tela);
+                            finish();
                         }else{
                             Toast.makeText(context, "Ops, algo de errado não está certo...", Toast.LENGTH_SHORT).show();
                         }
@@ -63,10 +69,12 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        //verifica se existe um valor para a chave "usuario" no sharedPreferences
         String nome_usuario = sharedPreferences.getString("usuario", "");
         if(!nome_usuario.equals("")){
             Intent tela = new Intent(context, MenuActivity.class);
             startActivity(tela);
+            finish();
         }
 
     }
